@@ -11,7 +11,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDnVbRrZhhECDn0P8XJW3mXrkIkeX-NKu4",
+  apiKey: "-",
   authDomain: "practiceset-e8b66.firebaseapp.com",
   projectId: "practiceset-e8b66",
   storageBucket: "practiceset-e8b66.firebasestorage.app",
