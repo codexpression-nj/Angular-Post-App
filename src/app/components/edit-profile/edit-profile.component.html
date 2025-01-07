@@ -1,0 +1,22 @@
+<div class="edit-profile-form">
+    <h3>Edit Profile</h3>
+  
+    <div style="margin: 16px;">
+      <label for="name">Name:</label>
+      <input style="width: 100%"  id="name" type="text" [(ngModel)]="updatedName" />
+    </div>
+  
+    <div style="margin: 16px;">
+      <label for="profile-picture">Profile Picture:</label>
+      <input style="width: 100%"  id="profile-picture" type="file" (change)="onFileSelected($event)" />
+    </div>
+  
+    <div *ngIf="updatedProfilePicture">
+      <p>Preview:</p>
+      <img [src]="updatedProfilePicture" alt="Profile Picture" style="max-width: 200px; max-height: 200px;" />
+    </div>
+    
+  
+    <button (click)="saveChanges()">Save</button>
+  </div>
+  

@@ -1,0 +1,29 @@
+<div class="content" >
+    <form class="addPost" (submit)="addPost()">
+        <textarea [(ngModel)]="postContent" name="postContent" placeholder="Share something"></textarea>
+        <input placeholder="upload" type="file" (change)="onFileSelected($event)"/>
+        <button style=" height: 30px; width: 70px; text-align: center;"  >Post</button>
+    </form>
+</div>
+
+<div class="content" *ngFor="let post of posts" >
+    <div class="post">
+        <p>{{ post.timestamp?.toDate()?.toLocaleString() }}</p>
+        <h3>{{post.content}}</h3>
+        <img [src]="post.image"/>
+
+        <div *ngIf="post.userId == currentUserID" class="buttons">
+            <button (click)="startEdit(post)">Edit</button>
+            <button (click)="deletePost(post.id)">Delete</button>
+        </div>
+        
+    </div>
+
+    <div *ngIf="postEditID == post.id">
+        <h2>Editing post</h2>
+        <textarea [(ngModel)]="postContent" name="postContent" placeholder="Share something"></textarea>
+        <!-- <input placeholder="upload" type="file" (change)="onFileSelected($event)"/> -->
+        <button (click)="updatePost()"> Save Update</button>
+        <button (click)="cancelEditing()"> Cancel</button>
+    </div>
+</div>

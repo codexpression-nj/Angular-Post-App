@@ -1,0 +1,12 @@
+.spacer{
+    flex: 1;
+}
+
+.profilePic{
+    /* margin-block-start: 1em;
+    margin-block-end: 1em; */
+    border-radius: 50%;
+    align-self: center;
+    justify-content: center;
+    object-fit: cover;
+}

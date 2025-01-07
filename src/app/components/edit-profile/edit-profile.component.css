@@ -1,0 +1,30 @@
+
+  .edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: auto;
+    text-align: center;
+  }
+  
+  .edit-profile-form img {
+    border-radius: 10px;
+    
+  }
+  input{
+    height: 30px;
+    background-color:  #12bb9921;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+
+  }
+  button {
+    border-radius: 20px;
+    margin: 20px;
+    padding: 0 50px;
+    height: 40px;
+    border: none;
+  }
+  
